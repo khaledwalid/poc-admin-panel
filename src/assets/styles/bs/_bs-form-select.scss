@@ -1,0 +1,38 @@
+.form-select {
+    padding-inline-start: $form-select-padding-x !important;
+    padding-inline-end: $form-select-indicator-padding !important;
+
+    &:focus {
+        border-color: $input-border-color;
+        box-shadow: none;
+    }
+
+    [dir="rtl"] & {
+        background-position: left $form-select-padding-x center;
+    }
+}
+
+.was-validated .form-select:valid:not([multiple]):not([size]),
+.was-validated .form-select:valid:not([multiple])[size="1"],
+.form-select.is-valid:not([multiple]):not([size]),
+.form-select.is-valid:not([multiple])[size="1"],
+.was-validated .form-select:invalid:not([multiple]):not([size]),
+.was-validated .form-select:invalid:not([multiple])[size="1"],
+.form-select.is-invalid:not([multiple]):not([size]),
+.form-select.is-invalid:not([multiple])[size="1"] {
+    --#{$prefix}form-select-bg-img: none;
+
+    padding: $input-padding-y $input-padding-x;
+
+    &.form-select-sm {
+        padding: $form-select-padding-y-sm $form-select-padding-x-sm;
+    }
+
+    &.form-select-lg {
+        padding: $form-select-padding-y-lg $form-select-padding-x-lg;
+    }
+
+    [dir="rtl"] & {
+        background-position: left $form-select-padding-x center;
+    }
+}

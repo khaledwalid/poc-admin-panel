@@ -1,0 +1,24 @@
+.was-validated .form-control:valid,
+.form-control.is-valid,
+.was-validated .form-control:invalid,
+.form-control.is-invalid,
+.was-validated textarea.form-control:valid,
+textarea.form-control.is-valid,
+was-validated textarea.form-control:invalid,
+textarea.form-control.is-invalid {
+
+    padding: $input-padding-y $input-padding-x;
+
+    &.form-control-sm {
+        padding: $input-padding-y-sm $input-padding-x-sm;
+    }
+
+    &.form-control-lg {
+        padding: $input-padding-y-lg $input-padding-x-lg;
+    }
+
+    [dir="rtl"] & {
+        padding-inline-end: $input-height-inner;
+        background-position: left $input-height-inner-quarter center;
+    }
+}
